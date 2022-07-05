@@ -1,7 +1,7 @@
 # Confession-Web-app
 Simple Confession website
-Hello Everyone good to see you all, This is a very basic site here you can tell your mind stories and your latest happenings with other people around the world. 
-You can type any new thing you find in your life. Here any person can do anything. Full freedom for your thoughts and your work. If you delete something from here, 
-then it will be removed from our database completely.
-Since this is a free app so it have memory access of atmost 100mb for now. Sorry for that you can delete any other confession and write a new for your own.
-Thinking what, start typing!!! you will feel then relaxed, I swear!!!
+This is a simple website made for writing confession and saving that confession in our database. 
+For making this website we have used mongodb database for storing the data of different confessions in the form of string. 
+In this app I have implemented the REST api's like GET, POST, DELETE to perform the users actions and try to make this website as dynamic as possible.
+We have used Node JS and implemented the basic structure needed to build a long websites like for eg. Controllers and model, routes etc. 
+Used the EJS file formatting for setting up the frontend of the website.
