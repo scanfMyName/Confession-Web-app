@@ -1,0 +1,20 @@
+<html lang="en">
+<%- include("../partial/head.ejs") %>
+
+<body>
+  <%- include("../partial/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/notes" method="POST">
+      <label for="title">Confess to whom:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="body">Confession:</label>
+      <textarea id="body" name="body" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("../partial/footer.ejs") %>
+</body>
+</html>
+

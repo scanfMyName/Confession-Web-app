@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partial/head.ejs') %>
+<body>
+    <%- include('../partial/nav.ejs') %>
+    <div class="blog-content">
+        <h2>All Confessions</h2>
+        <% if (notes.length > 0) { %>
+            <% notes.forEach(note => {%>
+                <a href="/notes/<%= note._id %>" class="single">
+                    <h3><%= note.title %></h3>
+                    <p><%= note.body %></p>
+                </a>
+            <% })  %>
+        <%} else {%>
+            <p>There is no Confessions at present, you can start writing one!!!!:)</p>
+        <% } %>
+    </div>
+    <%- include('../partial/footer.ejs') %>
+</body>
+</html>
