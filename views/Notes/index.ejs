@@ -7,7 +7,7 @@
         <h2>All Confessions</h2>
         <% if (notes.length > 0) { %>
             <% notes.forEach(note => {%>
-                <a href="/notes/<%= note._id %>" class="single">
+                <a href="/confessions/<%= note._id %>" class="single">
                     <h3><%= note.title %></h3>
                     <p><%= note.body %></p>
                 </a>

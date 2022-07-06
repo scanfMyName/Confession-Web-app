@@ -10,10 +10,12 @@ const PORT = process.env.PORT || 3000;
 // connect to mongodb & listen for requests
 // const dbURI = "mongodb+srv://netninja:test1234@net-ninja-tuts-del96.mongodb.net/node-tuts";
 const dbURI = "mongodb+srv://MayankGarg:MyUniverse@notemaking.m0xl1.mongodb.net/test";
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+const connectDB = async () => {
+  await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(PORT))
   .catch(err => console.log(err));
-
+}
+connectDB();
 // register view engine
 app.set('view engine', 'ejs');
 
@@ -28,7 +30,7 @@ app.use((req, res, next) => {
 
 // routes
 app.get('/', (req, res) => {
-  res.redirect('/notes');
+  res.redirect('/confessions');
 });
 
 app.get('/about', (req, res) => {
@@ -36,9 +38,10 @@ app.get('/about', (req, res) => {
 });
 
 // blog routes
-app.use('/notes', noteRoutes);
+app.use('/confessions', noteRoutes);
 
 // 404 page
 app.use((req, res) => {
   res.status(404).render('404', { title: '404' });
 });
+// notes = confessions

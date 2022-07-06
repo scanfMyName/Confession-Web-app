@@ -4,7 +4,7 @@ const notes = require('../models/notes')
 const get_all_notes = (req,res) => {
     notes.find().sort({ createdAt: -1})
     .then((result) =>{
-        res.render('Notes/index', { title: "All Notes", notes: result})
+        res.render('Notes/index', { title: "All confessions", notes: result})
     }) 
     .catch((err) =>{
         console.log(err)
@@ -20,7 +20,8 @@ const get_a_note = (req,res) =>{
             .then((result)=>{
                 res.render('Notes/details', {note:result, title: "Detailed Notes"})
             })
-            .catch((err)=>  {console.log(err)
+            .catch((err)=>  {
+                console.log(err)
                 res.status(404).render('404',{title:'Note not found'})
             })
     // }
@@ -30,7 +31,7 @@ const get_a_note = (req,res) =>{
 }
 
 const create_note_get = (req,res)=>{
-    res.render('Notes/create',{title:'Create new notes'});
+    res.render('Notes/create',{title:'Create new confession'});
 }
 
 const create_note = (req,res)=>{
@@ -39,7 +40,7 @@ const create_note = (req,res)=>{
 
     note.save()
     .then((result)=>{
-        res.redirect('/notes')
+        res.redirect('/confessions')
     })
     .catch((err) =>{
         console.log(err)
@@ -55,7 +56,7 @@ const delete_note = (req,res) =>{
         
     })
     .catch( err => {
-        res.status(404).render('404',{title:'Note not Found'})
+        res.status(404).render('404',{title:'Confession not Found'})
         console.log(err);
     })
 }

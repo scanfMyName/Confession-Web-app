@@ -17,7 +17,7 @@
   <script>
       const traschen = document.querySelector('a.delete');
       traschen.addEventListener('click', (e) =>{
-          const endpoint = `/notes/${traschen.dataset.doc}`;
+          const endpoint = `/confessions/${traschen.dataset.doc}`;
             
             fetch(endpoint,{
                 method:'DELETE'
