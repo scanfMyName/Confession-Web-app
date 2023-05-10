@@ -11,4 +11,3 @@ In this app I have implemented the REST api's like GET, POST, DELETE to perform 
 We have used Node JS and implemented the basic structure needed to build a long websites like for eg. Controllers and model, routes etc. 
 
 I have Used the EJS file formatting for setting up the frontend of the website and responding to users query as per needed.
-The deployed Heroku app link: https://fathomless-journey-53039.herokuapp.com/confessions
